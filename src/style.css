@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+
+:root {
+  font-family: 'Roboto', sans-serif;
+  --light-brown: #fefae0;
+  --light-green: #e9f5db;
+  --text-color: #001a23;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e9f5db;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: 10vw 1fr 1fr 10vw;
+  color: var(--text-color);
+}
+
+/* HEADER */
+
+#header {
+  position: fixed;
+  min-height: 6vh;
+  width: 100%;
+  display: grid;
+  gap: 2rem;
+  padding: 0 2rem;
+  grid-column: span 4;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  background-color: var(--light-green);
+  z-index: 1;
+  /* border-bottom: thin solid #b5c99a; */
+  box-shadow: 0px -1px 10px #606c38;
+}
+
+#header img {
+  height: 4vh;
+}
+
+#header .tab {
+  cursor: pointer;
+}
+
+/* HOME PAGE */
+
+.page {
+  display: contents;
+}
+
+.page #welcome {
+  grid-column:span 4;
+  position: relative;
+  min-height: 94vh;
+  width: 100vw;
+  overflow: hidden;
+  background-image: url('./img/home-1.jpg');
+  background-position: center;
+  background-size: cover;
+  margin-top: 6vh;
+}
+
+.page #welcome-text-wrapper {
+  position: absolute;
+  top: 30%;
+  right: 0;
+  width: 40rem;
+  color: var(--light-brown);
+  background-color: #aeb7a3c7;
+  padding: 1rem 10vw 1rem 1rem;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+.page #welcome-text-wrapper #welcome-text {
+  font-size: 1.8rem;
+  text-shadow: 2px 2px 0px var(--text-color);
+  margin: 0;
+  white-space: pre-line;
+}
+.page #welcome-text-wrapper #welcome-text span {
+  color: var(--light-green);
+  text-shadow: 3px 3px var(--text-color), 6px 6px var(--light-brown);
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+
+.page #description {
+  grid-column: 2 / span 2;
+  text-align: center;
+  letter-spacing: 0.05rem;
+  line-height: 1.5rem;
+  padding: 2rem 0;
+}
+
+.page #description h2 {
+  font-size: 4.5rem;
+  color: #606c38;
+  text-shadow: 3px 3px var(--text-color), 6px 6px #dda15e;
+  margin: 0 0 2rem 0;
+  line-height: normal;
+}
+
+.page #gallery {
+  min-height: 94vh;
+  grid-column: span 4;
+  display: grid;
+  background-color: var(--light-brown);
+  gap: 0.5rem;
+  grid-template: 
+    "three two two" 4fr
+    "three four five" 5fr /
+    1fr 1fr 1fr;
+}
+
+.page #gallery #home-2 {
+  grid-area: two;
+  background-image: url('./img/home-2.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.page #gallery #home-3 {
+  grid-area: three;
+  background-image: url('./img/home-3.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.page #gallery #home-4 {
+  grid-area: four;
+  background-image: url('./img/home-4.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.page #gallery #home-5 {
+  grid-area: five;
+  background-image: url('./img/home-5.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.page #faq {
+  display: grid;
+  grid-column: 2 / span 2;
+  padding: 2rem 2rem;
+  gap: 2rem 10vw;
+  min-height: 88vh;
+  grid-template-columns: 1fr 1fr;
+  align-content: start;
+}
+
+.page #faq h3 {
+  margin-top: 0;
+}
+
+.page #faq #faq-header {
+  grid-column: span 2;
+  text-align: center;
+  font-size: 4.5rem;
+  color: #606c38;
+  text-shadow: 3px 3px var(--text-color), 6px 6px #dda15e;
+  margin: 0;
+}
+
+.page #faq p,
+.page #faq h3 {
+  letter-spacing: 0.05rem;
+  line-height: 1.5rem;
+}
+
+.page #footer {
+  grid-column: span 4;
+  height: 6vh;
+  width: 100%;
+  background-color: var(--light-brown);
+  display: grid;
+  place-content: center;
+  gap: 2rem;
+  grid-auto-flow: column;
+  box-shadow: 0px 1px 10px #c9ae8f;
+}
+
+.page #footer a {
+  color: var(--text-color);
+}
+
+/* MENU PAGE */
+
+.page #menu-1-text p,
+.page #menu-2-text p,
+.page #menu-3-text p {
+  letter-spacing: 0.05rem;
+  line-height: 1.5rem;
+  white-space: pre-line;
+}
+
+.page #menu-1-text h2,
+.page #menu-2-text h2,
+.page #menu-3-text h2 {
+  font-size: 3.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #606c38;
+  text-shadow: 3px 3px var(--text-color), 6px 6px #dda15e;
+  text-align: center;
+}
+
+.page #menu-1 {
+  grid-column: 1 / 3;
+  margin-top: 6vh;
+  background-image: url('./img/food-1.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 60vh;
+}
+
+.page #menu-1-text {
+  grid-column: 3;
+  margin-top: 6vh;
+  padding: 2rem 0rem 2rem 1rem;
+  align-self: center;
+}
+
+.page #menu-2-text {
+  grid-column: 2;
+  padding: 2rem 1rem 2rem 0rem;
+  align-self: center;
+}
+
+.page #menu-2 {
+  grid-column: 3 / 5;
+  min-height: 60vh;
+  background-image: url('./img/food-2.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.page #menu-3 {
+  grid-column: 1 / 3;
+  min-height: 60vh;
+  background-image: url('./img/food-3.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.page #menu-3-text {
+  grid-column: 3;
+  padding: 2rem 0rem 2rem 1rem;
+  align-self: center;
+}
+
+/* CONTACT PAGE */
+
+.page #person-one p,
+.page #person-two p {
+  letter-spacing: 0.05rem;
+  line-height: 1.5rem;
+}
+
+.page #person-one h2,
+.page #person-two h2 {
+  font-size: 2.5rem;
+  margin-top: 0;
+  color: #606c38;
+  text-shadow: 2px 2px var(--text-color), 4px 4px #dda15e;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.page #person-one {
+  grid-column: 2;
+  margin-top: 6vh;
+  padding: 2rem 5vw 2rem 0rem;
+}
+
+.page #person-one .person-img {
+  background-image: url('./img/contact-1.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 35vw;
+  height: 45vw;
+  margin-bottom: 2rem;
+}
+
+.page #person-two {
+  grid-column: 3;
+  margin-top: 6vh;
+  padding: 2rem 0 2rem 5vw;
+}
+
+.page #person-two .person-img {
+  background-image: url('./img/contact-2.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 35vw;
+  height: 45vw;
+  margin-bottom: 2rem;
+}
+
+.page #map {
+  grid-column: 2;
+  padding: 2rem 5vw 2rem 0rem;
+  height: 45vw;
+}
+
+.page #map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.page #address {
+  grid-column: 3;
+  padding: 2rem 0rem 2rem 5vw;
+  letter-spacing: 0.05rem;
+  line-height: 1.5rem;
+}
+
+.page #address h3:first-of-type {
+  margin-top: 0;
+}
+
